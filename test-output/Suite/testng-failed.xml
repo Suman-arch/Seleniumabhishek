@@ -4,13 +4,15 @@
   <listeners>
     <listener class-name="resources1.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Validate Title(failed)">
     <classes>
-      <class name="tests.RediffPageTest">
+      <class name="tests.validateTitle">
         <methods>
-          <include name="start" invocation-numbers="0 1"/>
+          <include name="validateAppTitle"/>
+          <include name="initialize"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- tests.RediffPageTest -->
+      </class> <!-- tests.validateTitle -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Validate Title(failed) -->
 </suite> <!-- Failed suite [Suite] -->

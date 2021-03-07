@@ -1,0 +1,34 @@
+13:04:24.140 [main] INFO  tests.QAClickAcademyTest - driver is initialized
+13:04:24.186 [main] INFO  tests.QAClickAcademyTest - waiting for 20 seconds in each operation
+13:04:36.199 [main] INFO  tests.QAClickAcademyTest - getting the url
+13:04:38.103 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:04:38.240 [main] INFO  tests.QAClickAcademyTest - entering the email
+13:04:38.350 [main] INFO  tests.QAClickAcademyTest - entering the password
+13:04:38.563 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:04:38.633 [main] INFO  tests.QAClickAcademyTest - navigating back to the screen
+13:04:44.196 [main] INFO  tests.QAClickAcademyTest - getting the url
+13:04:44.560 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:04:44.702 [main] INFO  tests.QAClickAcademyTest - entering the email
+13:04:44.801 [main] INFO  tests.QAClickAcademyTest - entering the password
+13:04:44.989 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:04:45.063 [main] INFO  tests.QAClickAcademyTest - navigating back to the screen
+13:04:54.209 [main] INFO  Main.Base - Navigation Bar is displayed
+13:04:55.695 [main] INFO  Main.Base - Driver is initialized
+13:04:59.721 [main] INFO  Main.Base - Navigated to Home page
+13:09:19.109 [main] INFO  tests.QAClickAcademyTest - driver is initialized
+13:09:19.123 [main] INFO  tests.QAClickAcademyTest - waiting for 20 seconds in each operation
+13:09:31.328 [main] INFO  tests.QAClickAcademyTest - getting the url
+13:09:35.086 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:09:35.184 [main] INFO  tests.QAClickAcademyTest - entering the email
+13:09:35.274 [main] INFO  tests.QAClickAcademyTest - entering the password
+13:09:35.501 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:09:35.561 [main] INFO  tests.QAClickAcademyTest - navigating back to the screen
+13:09:52.041 [main] INFO  tests.QAClickAcademyTest - getting the url
+13:09:52.618 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:09:52.732 [main] INFO  tests.QAClickAcademyTest - entering the email
+13:09:52.819 [main] INFO  tests.QAClickAcademyTest - entering the password
+13:09:53.043 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+13:09:53.098 [main] INFO  tests.QAClickAcademyTest - navigating back to the screen
+13:10:25.757 [main] INFO  Main.Base - Navigation Bar is displayed
+13:10:27.255 [main] INFO  Main.Base - Driver is initialized
+13:10:33.001 [main] INFO  Main.Base - Navigated to Home page

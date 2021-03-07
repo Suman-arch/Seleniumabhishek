@@ -4,9 +4,19 @@
 <listeners>
 <listener class-name="resources1.Listeners"/>
 </listeners>
-  <test name="Test">
+  <test name="Home Page">
     <classes>
-      <class name="tests.QAClickAcademyTest"/>
+      <class name="tests.HomePage"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
+  <test name="Validate Navigation Bar">
+    <classes>
+      <class name="tests.validateNavigationBar"/>
+    </classes>
+  </test>
+  <test name="Validate Title">
+    <classes>
+      <class name="tests.validateTitle"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->

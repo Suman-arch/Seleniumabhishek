@@ -12,38 +12,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
 public class Base {
 	
-	public static WebDriver driver;
+	public  WebDriver driver;
 	public  Properties props;
 	
-	public static ExtentSparkReporter reporter;
-	public static ExtentReports ext;
-	
-	
-	public void generateReport()
+	public String getScreenShotPath(String testCaseName,WebDriver driver) throws IOException
 	{
-		String path=System.getProperty("user.dir")+"\\reports\\index.html";
-		reporter=new ExtentSparkReporter(path);
-		reporter.config().setDocumentTitle("Test Results");
-		reporter.config().setReportName("Web Automation Results");
-		
-		ExtentReports ext=new ExtentReports();
-		ext.attachReporter(reporter);
-		ext.setSystemInfo("Tester","Abhishek");
-		
-	}
-//	
-    public  static void getScreenshot(String s) throws IOException
-    {
-    	TakesScreenshot ts=(TakesScreenshot)driver;
-    File scrFile=ts.getScreenshotAs(OutputType.FILE);
-    FileUtils.copyFile(scrFile,new File(System.getProperty("user.dir")+"\\src\\main\\java\\reports\\"+s+".png"));
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File source =ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+".png";
+		FileUtils.copyFile(source,new File(destinationFile));
+		return destinationFile;
 
-    }
+
+	}
 	public WebDriver Capabilities() throws IOException
 	{
 		FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Global.properties");
@@ -53,7 +36,7 @@ public class Base {
 		//String browsername=System.getProperty("browser");
 		if(browsername.equalsIgnoreCase("Chrome"))
 		{
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\a5150\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\chromedriver.exe");
 		driver=new ChromeDriver();
 		}
 		else
