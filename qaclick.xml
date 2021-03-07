@@ -6,17 +6,17 @@
 </listeners>
   <test name="Home Page">
     <classes>
-      <class name="tests.HomePage"/>
+      <class name="tests.HomePageTest"/>
     </classes>
   </test>
   <test name="Validate Navigation Bar">
     <classes>
-      <class name="tests.validateNavigationBar"/>
+      <class name="tests.validateNavigationBarTest"/>
     </classes>
   </test>
   <test name="Validate Title">
     <classes>
-      <class name="tests.validateTitle"/>
+      <class name="tests.validateTitleTest"/>
     </classes>
   </test>
 </suite> <!-- Suite -->

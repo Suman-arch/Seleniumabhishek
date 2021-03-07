@@ -13,32 +13,34 @@ import org.testng.annotations.Test;
 import Main.Base;
 import pageObjects.LandingPage;
 
-public class validateTitle extends Base {
+
+public class validateNavigationBarTest extends Base {
 	public WebDriver driver;
-	public static Logger log = LogManager.getLogger(Base.class.getName());
+
+	public static Logger log = LogManager.getLogger(validateNavigationBarTest.class.getName());
 
 	@BeforeTest
+
 	public void initialize() throws IOException {
 
 		driver = Capabilities();
-		log.info("Driver is initialized");
 
 		driver.get(props.getProperty("url"));
-		log.info("Navigated to Home page");
 	}
 
 	@Test
 
-	public void validateAppTitle() throws IOException {
+	public void validateAppNavBar() throws IOException {
 
 		// one is inheritance
 		// creating object to that class and invoke methods of it
 		LandingPage l = new LandingPage(driver);
-		// compare the text from the browser with actual text.- Error..
-		Assert.assertEquals(l.getTitle().getText(), "FEATURED CO123URSES");
-		log.info("Successfully validated Text message");
-		System.out.println("Test completed");
 
+		// compare the text from the browser with actual text.- Error..
+		Assert.assertTrue(l.getNavigationBar().isDisplayed());
+		log.info("Navigation Bar is displayed of navbartest");
+		System.out.println("Test completed");
+		// Assert.assertFalse(false);
 		;
 
 	}

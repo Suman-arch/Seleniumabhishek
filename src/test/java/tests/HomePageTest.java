@@ -7,7 +7,6 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Main.Base;
@@ -16,15 +15,16 @@ import pageObjects.ForgotPassword;
 import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 
-public class HomePage extends Base {
+public class HomePageTest extends Base {
 	public WebDriver driver;
 
-	public static Logger log = LogManager.getLogger(Base.class.getName());
+	public static Logger log = LogManager.getLogger(HomePageTest.class.getName());
 
 	@BeforeTest
 	public void initialize() throws IOException {
 
 		driver = Capabilities();
+		log.info("driver is initialized");
 
 	}
 
@@ -36,6 +36,7 @@ public class HomePage extends Base {
 
 		// creating object to that class and invoke methods of it
 		driver.get(props.getProperty("url"));
+		log.info("getting the home page of homepagetest");
 		LandingPage l = new LandingPage(driver);
 		LoginPage lp = l.getLogin(); // driver.findElement(By.css()
 		lp.getEmail().sendKeys(Username);
@@ -54,6 +55,7 @@ public class HomePage extends Base {
 	public void teardown() {
 
 		driver.close();
+		log.info("closing the driver");
 
 	}
 

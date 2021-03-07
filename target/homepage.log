@@ -1,6 +1,7 @@
-15:33:09.071 [main] INFO  Main.Base - Navigation Bar is displayed
-15:33:10.471 [main] INFO  Main.Base - Driver is initialized
-15:33:16.048 [main] INFO  Main.Base - Navigated to Home page
-15:38:31.138 [main] INFO  Main.Base - Navigation Bar is displayed
-15:38:32.375 [main] INFO  Main.Base - Driver is initialized
-15:38:43.202 [main] INFO  Main.Base - Navigated to Home page
+17:43:58.215 [main] INFO  tests.HomePageTest - driver is initialized
+17:44:08.452 [main] INFO  tests.HomePageTest - getting the home page of homepagetest
+17:44:16.980 [main] INFO  tests.HomePageTest - getting the home page of homepagetest
+17:44:17.926 [main] INFO  tests.HomePageTest - closing the driver
+17:44:34.562 [main] INFO  tests.validateNavigationBarTest - Navigation Bar is displayed of navbartest
+17:44:35.781 [main] INFO  tests.validateTitleTest - Driver is initialized
+17:44:47.015 [main] INFO  tests.validateTitleTest - Navigated to validatetitle page

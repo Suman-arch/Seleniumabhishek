@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Validate Title(failed)">
     <classes>
-      <class name="tests.validateTitle">
+      <class name="tests.validateTitleTest">
         <methods>
+          <include name="teardown"/>
           <include name="validateAppTitle"/>
           <include name="initialize"/>
-          <include name="teardown"/>
         </methods>
-      </class> <!-- tests.validateTitle -->
+      </class> <!-- tests.validateTitleTest -->
     </classes>
   </test> <!-- Validate Title(failed) -->
 </suite> <!-- Failed suite [Suite] -->

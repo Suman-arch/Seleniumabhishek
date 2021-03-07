@@ -35,7 +35,7 @@ public class RediffPageTest extends Base{
 	public void start() throws IOException
 	{
     	driver.get(props.getProperty("url1"));
-     	log.info("getting the url");
+     	log.info("getting the url of redifftest");
     	 RediffHomePage p=new RediffHomePage(driver);
 		p.gettext().sendKeys("bollywood songs 2021 ");
 		p.gettext().sendKeys(Keys.ENTER);
