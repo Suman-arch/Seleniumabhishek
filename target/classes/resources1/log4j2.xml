@@ -4,12 +4,19 @@
 <Property name="basePath">./target</Property>
 </Properties>
   <Appenders>
-  <RollingFile name="File" fileName="${basePath}/apidemos.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+  <RollingFile name="File" fileName="${basePath}/homepage.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
       <SizeBasedTriggeringPolicy size="80000" />
           </RollingFile>
-          
-          <RollingFile name="File2" fileName="${basePath}/general.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+           <RollingFile name="File1" fileName="${basePath}/validatenavigationbar.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+     <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <SizeBasedTriggeringPolicy size="80000" />
+          </RollingFile>
+           <RollingFile name="File2" fileName="${basePath}/validateTitle.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+     <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <SizeBasedTriggeringPolicy size="80000" />
+          </RollingFile>
+          <RollingFile name="File3" fileName="${basePath}/rediffpagetest.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
       <SizeBasedTriggeringPolicy size="80000" />
           </RollingFile>
@@ -19,15 +26,23 @@
     </Console>-->
   </Appenders>
   <Loggers>
-    <Logger name="tests.QAClickAcademyTest" level="trace" additivity="false">
+    <Logger name="tests.HomePage" level="trace" additivity="false">
       <AppenderRef ref="File"/>
     </Logger>
-    <Logger name="tests.RediffPageTest" level="trace" additivity="false">
+     <Logger name="tests.validateNavigationBar" level="trace" additivity="false">
+      <AppenderRef ref="File1"/>
+    </Logger>
+     <Logger name="tests.validateTitle" level="trace" additivity="false">
       <AppenderRef ref="File2"/>
+    </Logger>
+    <Logger name="tests.RediffPageTest" level="trace" additivity="false">
+      <AppenderRef ref="File3"/>
     </Logger>
      <Root level="trace">
       <AppenderRef ref="File"/>
-       <AppenderRef ref="File2"/>
+      <AppenderRef ref="File1"/>
+      <AppenderRef ref="File2"/>
+      <AppenderRef ref="File3"/>
     </Root>
   </Loggers>
 </Configuration>
