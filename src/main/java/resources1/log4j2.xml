@@ -10,7 +10,7 @@
       <DefaultRolloverStrategy>
       <Delete basePath="${baseDir}" maxDepth="1">
           <IfFileName glob="*/homepage-*.log" />
-          <IfLastModified age="PT1M" />
+          <IfLastModified age="P1D" />
         </Delete>
       </DefaultRolloverStrategy>
           </RollingFile>
@@ -20,7 +20,7 @@
       <DefaultRolloverStrategy>
       <Delete basePath="${baseDir}" maxDepth="1">
           <IfFileName glob="*/validatenavigationbar-*.log" />
-          <IfLastModified age="PT1M" />
+          <IfLastModified age="P1D" />
         </Delete>
       </DefaultRolloverStrategy>
           </RollingFile>
@@ -30,7 +30,7 @@
       <DefaultRolloverStrategy>
       <Delete basePath="${baseDir}" maxDepth="1">
           <IfFileName glob="*/validateTitle-*.log" />
-          <IfLastModified age="PT1M" />
+          <IfLastModified age="P1D" />
         </Delete>
       </DefaultRolloverStrategy>
           </RollingFile>
@@ -40,7 +40,7 @@
       <DefaultRolloverStrategy>
       <Delete basePath="${baseDir}" maxDepth="1">
           <IfFileName glob="*/rediffpagetest-*.log" />
-          <IfLastModified age="PT1M" />
+          <IfLastModified age="P1D" />
         </Delete>
       </DefaultRolloverStrategy>
           </RollingFile>
