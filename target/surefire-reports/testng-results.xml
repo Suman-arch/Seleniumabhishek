@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="10973" started-at="2021-03-05T19:22:52 IST" finished-at="2021-03-05T19:23:03 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="10973" started-at="2021-03-05T19:22:52 IST" finished-at="2021-03-05T19:23:03 IST">
+      <class name="tests.RediffPageTest">
+        <test-method status="PASS" signature="startup()[pri:0, instance:tests.RediffPageTest@4b5d6a01]" name="startup" is-config="true" duration-ms="2070" started-at="2021-03-05T19:22:52 IST" finished-at="2021-03-05T19:22:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="PASS" signature="start()[pri:0, instance:tests.RediffPageTest@4b5d6a01]" name="start" duration-ms="4675" started-at="2021-03-05T19:22:55 IST" finished-at="2021-03-05T19:22:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.RediffPageTest@4b5d6a01]" name="teardown" is-config="true" duration-ms="4179" started-at="2021-03-05T19:22:59 IST" finished-at="2021-03-05T19:23:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.RediffPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

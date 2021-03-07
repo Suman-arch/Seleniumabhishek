@@ -1,0 +1,14 @@
+17:46:43.493 [main] INFO  tests.QAClickAcademyTest - driver is initialized
+17:46:43.500 [main] INFO  tests.QAClickAcademyTest - waiting for 20 seconds in each operation
+17:46:48.323 [main] INFO  tests.QAClickAcademyTest - getting the url
+17:46:49.014 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+17:46:49.138 [main] INFO  tests.QAClickAcademyTest - entering the email
+17:46:49.223 [main] INFO  tests.QAClickAcademyTest - entering the password
+17:46:49.382 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+17:46:49.435 [main] INFO  tests.QAClickAcademyTest - navigating back to the screen
+17:46:51.247 [main] INFO  tests.QAClickAcademyTest - getting the url
+17:46:51.531 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+17:46:51.631 [main] INFO  tests.QAClickAcademyTest - entering the email
+17:46:51.712 [main] INFO  tests.QAClickAcademyTest - entering the password
+17:46:51.892 [main] INFO  tests.QAClickAcademyTest - clicking on the login button
+17:46:51.950 [main] INFO  tests.QAClickAcademyTest - navigating back to the screen
