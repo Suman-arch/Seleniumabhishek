@@ -4,26 +4,46 @@
 <Property name="basePath">./target</Property>
 </Properties>
   <Appenders>
-  <RollingFile name="File" fileName="${basePath}/homepage.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+  <RollingFile name="File" fileName="${basePath}/homepage.log" filePattern="${basePath}/homepage-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-      <SizeBasedTriggeringPolicy size="80000" />
+      <SizeBasedTriggeringPolicy size="5 KB" />
+      <DefaultRolloverStrategy>
+      <Delete basePath="${baseDir}" maxDepth="1">
+          <IfFileName glob="*/homepage-*.log" />
+          <IfLastModified age="PT1M" />
+        </Delete>
+      </DefaultRolloverStrategy>
           </RollingFile>
-           <RollingFile name="File1" fileName="${basePath}/validatenavigationbar.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+           <RollingFile name="File1" fileName="${basePath}/validatenavigationbar.log" filePattern="${basePath}/validatenavigationbar-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-      <SizeBasedTriggeringPolicy size="80000" />
+      <SizeBasedTriggeringPolicy size="5 KB" />
+      <DefaultRolloverStrategy>
+      <Delete basePath="${baseDir}" maxDepth="1">
+          <IfFileName glob="*/validatenavigationbar-*.log" />
+          <IfLastModified age="PT1M" />
+        </Delete>
+      </DefaultRolloverStrategy>
           </RollingFile>
-           <RollingFile name="File2" fileName="${basePath}/validateTitle.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+           <RollingFile name="File2" fileName="${basePath}/validateTitle.log" filePattern="${basePath}/validateTitle-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-      <SizeBasedTriggeringPolicy size="80000" />
+      <SizeBasedTriggeringPolicy size="5 KB" />
+      <DefaultRolloverStrategy>
+      <Delete basePath="${baseDir}" maxDepth="1">
+          <IfFileName glob="*/validateTitle-*.log" />
+          <IfLastModified age="PT1M" />
+        </Delete>
+      </DefaultRolloverStrategy>
           </RollingFile>
-          <RollingFile name="File3" fileName="${basePath}/rediffpagetest.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+          <RollingFile name="File3" fileName="${basePath}/rediffpagetest.log" filePattern="${basePath}/rediffpagetest-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-      <SizeBasedTriggeringPolicy size="80000" />
+      <SizeBasedTriggeringPolicy size="5 KB" />
+      <DefaultRolloverStrategy>
+      <Delete basePath="${baseDir}" maxDepth="1">
+          <IfFileName glob="*/rediffpagetest-*.log" />
+          <IfLastModified age="PT1M" />
+        </Delete>
+      </DefaultRolloverStrategy>
           </RollingFile>
-          
-          <!--  <Console name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-    </Console>-->
   </Appenders>
   <Loggers>
     <Logger name="tests.HomePage" level="trace" additivity="false">
