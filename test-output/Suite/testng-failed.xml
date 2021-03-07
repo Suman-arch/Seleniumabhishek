@@ -4,6 +4,17 @@
   <listeners>
     <listener class-name="resources1.Listeners"/>
   </listeners>
+  <test thread-count="5" name="Home Page(failed)">
+    <classes>
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="teardown"/>
+          <include name="basePageNavigation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+    </classes>
+  </test> <!-- Home Page(failed) -->
   <test thread-count="5" name="Validate Title(failed)">
     <classes>
       <class name="tests.validateTitleTest">

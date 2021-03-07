@@ -9,10 +9,37 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">9,802</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Home Page</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">40,147</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Validate Navigation Bar</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">20,111</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Validate Title</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">12,621</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num attn">2</th><th class="num">72,879</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.RediffPageTest</td><td><a href="#m0">start</a></td><td rowspan="1">1615119357543</td><td rowspan="1">3897</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Home Page &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.HomePageTest</td><td><a href="#m0">basePageNavigation</a></td><td rowspan="1">1615122362076</td><td rowspan="1">24212</td></tr><tr><th colspan="4">Home Page &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.HomePageTest</td><td><a href="#m1">basePageNavigation</a></td><td rowspan="1">1615122386867</td><td rowspan="1">13561</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Validate Navigation Bar &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.validateNavigationBarTest</td><td><a href="#m2">validateAppNavBar</a></td><td rowspan="1">1615122420878</td><td rowspan="1">58</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Validate Title &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.validateTitleTest</td><td><a href="#m3">validateAppTitle</a></td><td rowspan="1">1615122433199</td><td rowspan="1">35</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.RediffPageTest#start</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Home Page</h2><h3 id="m0">tests.HomePageTest#basePageNavigation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>fghf@gmail.com</td><td>dd45</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://rahulshettyacademy.com/sign_in/&quot;&gt;...&lt;/a&gt; is not clickable at point (992, 16). Other element would receive the click: &lt;div class=&quot;listbuilder-popup-content&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=88.0.4324.190)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-Q8T1KS2C&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.190, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\a5150\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c7e1242a10311568f532ff4a183ec26
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.LandingPage.getLogin(LandingPage.java:24)
+	at tests.HomePageTest.basePageNavigation(HomePageTest.java:41)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.HomePageTest#basePageNavigation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>fghf@gmail.com</td><td>dd45</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Validate Navigation Bar</h2><h3 id="m2">tests.validateNavigationBarTest#validateAppNavBar</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Validate Title</h2><h3 id="m3">tests.validateTitleTest#validateAppTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [FEATURED CO123URSES] but found [FEATURED COURSES]
+	at tests.validateTitleTest.validateAppTitle(validateTitleTest.java:38)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
