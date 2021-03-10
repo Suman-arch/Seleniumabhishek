@@ -5,7 +5,7 @@ timestamps()
 }
 parameter
 {
-choice(name='profileName',choices=['Qaclick','Google'],description='')
+choice(name='profileName',choices=['Qaclick','Google'],description='hello')
 }
 tools {
        jdk 'Java 8'
