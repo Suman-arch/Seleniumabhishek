@@ -38,7 +38,7 @@ echo "sending email on basis of current result"
 post {
 always {
 script {
-if(${currentBuild.currentResult}.equals("SUCCESS"))
+if(${currentBuild.currentResult}=="SUCCESS")
 {
 emailext(
 subject:"automation report for success",
