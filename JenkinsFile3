@@ -33,21 +33,18 @@ stage('Clean') {
                           } 
 stage('email') {
 steps {
-script {
-if(currentBuild.currentResult.equals("SUCCESS"))
-{
-emailext(
-subject:"automation report for success",
-to:"abhishek260297@gmail.com"
-)
+echo "sending mail"
 }
-else
+post {
+success
 {
-emailext(
-subject:"automation report for failure",
-to:"abhishek260297@gmail.com"
-)
+mail to: 'abhishek260297@gmail.com',
+subject: "Email Report for success
 }
+failure
+{
+mail to: 'abhishek260297@gmail.com',
+subject: "Email Report for failure
 }
 }
 }
