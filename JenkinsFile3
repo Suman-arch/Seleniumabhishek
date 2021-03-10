@@ -36,18 +36,18 @@ steps {
 echo "sending mail"
 }
 post {
-success
-{
-mail to: 'abhishek260297@gmail.com',
-subject: "Email Report for success",
-body: "success",
-                  mimeType:'text/html'
-}
 failure
 {
 mail to: 'abhishek260297@gmail.com',
 subject: "Email Report for failure",
 body: "failure",
+                  mimeType:'text/html'
+}
+success
+{
+mail to: 'abhishek260297@gmail.com',
+subject: "Email Report for success",
+body: "success",
                   mimeType:'text/html'
 }
 }
