@@ -3,7 +3,7 @@ agent any
 options {
 timestamps()
 }
-parameter
+parameters
 {
 choice(name='profileName',choices=['Qaclick','Google'],description='hello')
 }
