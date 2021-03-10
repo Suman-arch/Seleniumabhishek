@@ -30,25 +30,21 @@ stage('Clean') {
              steps  {              
                 bat "mvn test -P${params.profileName} "
                     }
-                          } 
-stage('email') {
-steps {
-echo "sending mail"
-}
+                          
 post {
 failure
 {
 mail to: 'abhishek260297@gmail.com',
 subject: "Email Report for failure",
 body: "failure",
-                  mimeType:'text/html'
+mimeType:'text/plain'
 }
 success
 {
 mail to: 'abhishek260297@gmail.com',
 subject: "Email Report for success",
 body: "success",
-                  mimeType:'text/html'
+mimeType:'text/plain'
 }
 }
 }
