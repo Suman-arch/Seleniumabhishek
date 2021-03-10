@@ -4,6 +4,9 @@ tools {
 jdk 'Java 8'
 maven 'Maven 3.6.3'
 }
+parameters {
+        choice(name:'profileName', choices:['Google','Qaclick'],description:'click on the profile name')
+    }
 options {
 timestamps()
 }
@@ -13,6 +16,21 @@ steps {
 git credentialsId: 'Suman Git', url: 'https://github.com/Suman-arch/fourth.git'
 }
 }
+stage('Clean') {
+             steps  {
+                bat "mvn clean "
+                     }
+                            }      
+           stage('Compile') {
+             steps  {
+                bat "mvn compile "
+                     }
+                            }                 
+          stage('Test') {
+             steps  {              
+                bat "mvn test -P${params.profileName} "
+                    }
+                          } 
 stage('email') {
 steps {
 echo "sending email on basis of current result"
