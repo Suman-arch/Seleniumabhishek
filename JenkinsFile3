@@ -1,0 +1,55 @@
+pipeline {
+agent any
+tools {
+jdk 'Java 8'
+maven 'Maven 3.6.3'
+}
+parameters {
+        choice(name:'profileName', choices:['Google','Qaclick'],description:'click on the profile name')
+    }
+options {
+timestamps()
+}
+stages{
+stage('checkout') {
+steps {
+git credentialsId: 'Suman Git', url: 'https://github.com/Suman-arch/fourth.git'
+}
+}
+stage('Clean') {
+             steps  {
+                bat "mvn clean "
+                     }
+                            }      
+           stage('Compile') {
+             steps  {
+                bat "mvn compile "
+                     }
+                            }                 
+          stage('Test') {
+             steps  {              
+                bat "mvn test -P${params.profileName} "
+                    }
+                          } 
+stage('email') {
+steps {
+script {
+if(currentBuild.currentResult.equals("SUCCESS"))
+{
+emailext(
+subject:"automation report for success",
+to:"abhishek260297@gmail.com"
+)
+}
+else
+{
+emailext(
+subject:"automation report for failure",
+to:"abhishek260297@gmail.com"
+)
+}
+}
+}
+}
+}
+}
