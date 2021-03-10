@@ -1,0 +1,42 @@
+pipeline {
+agent any
+tools {
+jdk 'Java 8'
+maven 'Maven 3.6.3'
+}
+options {
+timestamps()
+}
+stages{
+stage('checkout') {
+steps {
+git credentialsId: 'Suman Git', url: 'https://github.com/Suman-arch/fourth.git'
+}
+}
+stage('email') {
+steps {
+echo "sending email on basis of current result"
+}
+post {
+always {
+script {
+if($(currentBuild.currentResult).equals("SUCCESS"))
+{
+emailext(
+subject:"automation report for success",
+to:"abhishek260297@gmail.com"
+)
+}
+else
+{
+emailext(
+subject:"automation report for failure",
+to:"abhishek260297@gmail.com"
+)
+}
+}
+}
+}
+}
+}
+}
