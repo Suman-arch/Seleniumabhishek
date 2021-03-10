@@ -1,0 +1,66 @@
+pipeline {
+agent any
+options {
+timestamps()
+}
+parameter
+{
+choice(name='profileName',choices=['Qaclick','Google'],description='')
+}
+tools {
+       jdk 'Java 8'
+       maven 'Maven 3.6.3'
+     }
+stages {
+stage('Checkout') {
+steps {
+
+}
+}
+stage('Maven') {
+steps {
+bat "mvn clean compile"
+}
+}
+stage('test'){
+steps {
+bat "mvn test -P${params.profileName}"
+}
+}
+stage('report'){
+steps {
+echo "report is generating"
+}
+post {
+      success {
+       echo "success process"
+      }
+      failure {
+       echo "failure processs"
+      }
+    }
+}
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
