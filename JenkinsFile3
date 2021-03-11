@@ -36,15 +36,15 @@ failure
 {
 mail to: 'abhishek260297@gmail.com',
 subject: "Email Report for failure",
-body: "failure",
-mimeType:'text/plain'
+body: readFile("target/surefire-reports/emailable-report.html"),
+mimeType:'text/html'
 }
 success
 {
 mail to: 'abhishek260297@gmail.com',
 subject: "Email Report for success",
-body: "success",
-mimeType:'text/plain'
+body: readFile("target/index.html"),
+mimeType:'text/html'
 }
 }
 }
