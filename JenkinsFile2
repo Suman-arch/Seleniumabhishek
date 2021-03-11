@@ -29,12 +29,7 @@ stage('Clean') {
           stage('Test') {
              steps  {              
                 bat "mvn test -P${params.profileName} "
-                    }
-                          } 
-stage('email') {
-steps {
-echo "sending email on basis of current result"
-}
+                    }                       
 post {
 always {
 script {
