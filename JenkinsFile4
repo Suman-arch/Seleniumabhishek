@@ -23,10 +23,10 @@ bat "mvn clean compile test -P${profileName}"
 }
 stage('Writing html file') {
         steps {
-        sh "echo "<html>" >> myfile.html"
-        sh "echo "<header><title> This is the title</title></header>" >> myfile.html"
-        sh "echo "<body> how do you do? </body>" >> myfile.html"
-        sh "echo "</html>" >> myfile.html"
+        sh "<html>" >> myfile.html
+        sh "<header><title> This is the title</title></header>" >> myfile.html
+        sh "<body> how do you do? </body>" >> myfile.html
+        sh "</html>" >> myfile.html
         sh "ls -al myfile.html"
         sh "head -1 myfile.html"
         }
