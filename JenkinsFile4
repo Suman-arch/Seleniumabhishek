@@ -41,3 +41,4 @@ stage('Writing html file')
 }
 }
 }
+}
