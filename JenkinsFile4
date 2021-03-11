@@ -5,7 +5,7 @@ jdk 'Java 8'
        maven 'Maven 3.6.3'
 }
 parameters {
-choice(name:profileName,choices:['Google','Qaclick'],description='Hello,Hai')
+choice(name:'profileName',choices:['Google','Qaclick'],description='Hello,Hai')
 }
 options {
 timestamps()
@@ -33,7 +33,6 @@ stage('Writing html file') {
         }
         stage('Email') {
         steps {
-        
         env.ForEmailPlugin = env.WORKSPACE
         emailext mimeType: 'text/html',
         body: '${FILE, path="myfile.html"}',
