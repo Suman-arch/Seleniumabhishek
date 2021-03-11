@@ -5,7 +5,7 @@ jdk 'Java 8'
        maven 'Maven 3.6.3'
 }
 parameters {
-choice(name:'profileName',choices:['Google','Qaclick'],description='Hello,Hai')
+choice(name:'profileName',choices:['Google','Qaclick'],description='Hello I')
 }
 options {
 timestamps()
