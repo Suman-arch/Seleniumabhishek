@@ -38,6 +38,7 @@ if(currentBuild.currentResult.equals("SUCCESS"))
 {
 emailext(
 subject:"automation report for success",
+body: "${FILE,path="test-output/emailable-report.html"}",
 to:"abhishek260297@gmail.com"
 )
 }
@@ -45,6 +46,7 @@ else
 {
 emailext(
 subject:"automation report for failure",
+body: "${FILE,path="test-output/index.html"}",
 to:"abhishek260297@gmail.com"
 )
 }
