@@ -1,4 +1,3 @@
-/*
 pipeline {
 agent any
 tools {
@@ -14,7 +13,7 @@ timestamps()
 stages{
 stage('checkout') {
 steps {
-git credentialsId: 'Suman Git', url: 'https://github.com/Suman-arch/fourth.git'
+git credentialsId: 'Suman Git', url: 'https://github.com/Suman-arch/Seleniumabhishek.git'
 }
 }
 stage('Clean') {
@@ -59,4 +58,3 @@ to:"abhishek260297@gmail.com"
 }
 }
 }
-*/
