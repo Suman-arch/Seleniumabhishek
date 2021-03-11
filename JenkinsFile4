@@ -33,10 +33,9 @@ stage('Writing html file') {
         }
         stage('Email') {
         steps {
-        env.ForEmailPlugin = env.WORKSPACE
         emailext mimeType: 'text/html',
         body: '${FILE, path="myfile.html"}',
-        subject: currentBuild.currentResult + " : " + env.JOB_NAME,
+        subject: currentBuild.currentResult,
         to: 'abhishek260297@gmail.com'
          }
 }
