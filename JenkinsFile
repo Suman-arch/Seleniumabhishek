@@ -14,7 +14,7 @@ tools {
 stages {
 stage('Checkout') {
 steps {
-git credentialsId: 'Suman Git', url: 'https://github.com/Suman-arch/fourth.git'
+git credentialsId: 'Suman Git', url: 'https://github.com/Suman-arch/Seleniumabhishek.git'
 }
 }
 stage('Maven') {
