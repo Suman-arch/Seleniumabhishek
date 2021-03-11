@@ -6,6 +6,7 @@ jdk 'Java 8'
 }
 parameters {
 choice(name:profileName,choices:['Google','Qaclick'],description='Hello,Hai')
+}
 options {
 timestamps()
 }
@@ -43,4 +44,4 @@ stage('Writing html file')
 }
 }
 }
-}
+
