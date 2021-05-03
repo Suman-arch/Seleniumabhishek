@@ -43,7 +43,8 @@ success
 {
 mail to: 'abhishek260297@gmail.com',
 subject: "Email Report for success",
-body: readFile("target/index.html"),
+body: readFile("target/surefire-reports/emailable-report.html"),
+//body: readFile("target/index.html"),
 mimeType:'text/html'
 }
 }
